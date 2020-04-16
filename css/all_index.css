@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <meta http-equiv="X-UA-Compatible" content = "ie=edge">
+        <title> Keat </title>
+    </head>
+     <style>
+header {}
+header { padding: 0 30px 30px; background: linear-gradient(to right,#042e6f,#042e6f 50%,#f2f2f2 50%,#f2f2f2);}
+header .visual img{width: 100%;}
+header h1{position: absolute; z-index: 31; top: 0; left: 30px;}
+header>ul{display: flex; position: absolute; top: 0; right: 30px; z-index: 30; width: 170px;background:#f2f2f2;}
+header>ul li{flex: 1; line-height: 70px; padding: 0 0 0 18px;}
+header>ul li a:before{content: ""; display: inline-block; width: 23px; height: 23px; background: url(icon.png) no-repeat; vertical-align: middle;}
+header>ul li:first-child a:before{background-position: 0 0;}
+header>ul li:last-child a:before{background-position:-23px 0; }
+
+header .lnb{position: absolute; top: 0; left: 0; z-index: 30; padding: 0 232px; width: 100%;  box-sizing: border-box;}
+header .lnb nav{ position: relative; border-bottom: 1px solid rgba(255,255,255,0.5); text-align: center;  z-index: 30;}
+header .lnb nav+div{position: absolute; top: 0; left: 0; z-index:29; padding: 0 30px; background:#042e6f; width: 100%; height: 0; transition: all 0.5s; opacity: 0; box-sizing:border-box; background-clip: content-box;}
+header .lnb nav:hover+div{height: 400px; opacity: 1;}
+header .lnb nav>ul{display: inline-block; text-align: center; }
+
+header .lnb nav>ul:hover ul{display:block; }
+header .lnb nav>ul>li{display: inline-block; position: relative;}
+header .lnb nav>ul>li>a{display: block; position: relative; width: 160px; height: 69px; line-height: 69px; font-size: 18px; color: #fff;}
+header .lnb nav>ul>li>a:after{content: ""; position: absolute; bottom: -1px; left: 50%; width: 0; height: 2px; background: aliceblue; transition:all 0.5s;}
+header .lnb nav>ul>li:hover>a:after{content: ""; position: absolute; bottom: -1px; left: 0; width: 100%; height: 2px; background: aliceblue; }
+header .lnb nav>ul ul{display: none; position: absolute; width: 100%; height:230px; text-align: center; padding: 22px 0 0 0;}
+header .lnb nav>ul ul li{line-height: 61px;}
+header .lnb nav>ul ul a{position: relative; color: #fff; font-size: 14px; transition: all 0.5s;}
+header .lnb nav>ul ul a:hover{color: #2acef1;}
+header .lnb nav>ul ul a:after {content: ""; position: absolute; bottom: -7px; left: 50%; width:0; height: 2px; background: #2acef1; transition: all 0.3s}
+header .lnb nav>ul ul a:hover:after{content: ""; position: absolute; bottom: -7px; left: 0; width: 100%; height: 2px; background: #2acef1; }
+
+footer{background: #051939;}
+footer>div{position: relative; width: 1175px; margin: 0 auto; padding: 40px 0;}
+footer>div>a{position: absolute; top: -25px; right: 0; background: url(icon.png) no-repeat -155px 10px #52afff; width: 39px; height: 50px; color: transparent;}
+footer .left{float: left; line-height: 100%;}
+footer .left a{color: #fff;}
+footer .left ul{ margin: 0 0 15px 0; line-height: 100%;}
+footer .left li{display: inline-block; padding: 0 10px 0 0;}
+footer .left p{margin: 0 0 7px 0;}
+footer .left span{padding: 0 10px;}
+footer .right{float: right; position: relative;}
+footer .right select{top: -10px; width: 134px; height: 29px; background:#051939; color: #fff; border: none; border-bottom: 1px solid #fff; border-radius: 0; font-weight: normal; text-indent: 15px; appearance:none; -webkit-appearance:none;}
+footer>div .right select::-ms-expand{display: none;}
+footer>div .right:after{content: ""; position: absolute; top: 50%; right: 20px; transform: translateY(-50%); background:url(icon.png) no-repeat -221px -5px; width: 8px; height: 6px;}
+ 
+.contents{width: 1180px; margin: 0 auto;}
+.h2{position: relative; padding: 55px 0 43px 0; font-size: 36px; line-height: 100%; color: #222; text-align: center; font-weight: normal;}
+.h2:after{content: ""; position: absolute; bottom:0; left: 50%; transform: translateX(-50%); width: 50px; height: 1px; background: #aaa;}
+.h2+p{font-size: 18px; color: #666; text-align: center; line-height: 30px; padding: 46px 0 54px 0;}
+
+input.table1{position: absolute; top: 0; left: -3000%;}
+input.table1+label{font-size: 14px; color: #222; ; line-height: 27px;}
+input.table1+label:before{content: ""; margin: 0 8px 0  0; width: 27px; height: 27px; display: inline-block; background: url(icon.png) no-repeat -97px -60px; vertical-align: middle; }
+input.table1:checked+label:before{background-position: -129px -60px;}
+
+input.type2{position: absolute; top: 0; left: -3000%;}
+input.type2+label{padding: 0 35px 0 0; font-size: 14px; color: #222; ; line-height: 27px;}
+input.type2+label:before{content: ""; margin: 0 8px 0  0; width: 12px; height: 12px; display: inline-block; background: url(icon.png) no-repeat -49px -60px;}
+input.type2:checked+label:before{background-position: -66px -60px;}
+
+
+.btn_type1{display: block; margin: 0 auto; color: #fff; font-size: 14px; background: #21217c; width: 120px; height: 45px; line-height: 45px; text-align: center;}
+.btn_type3{display: inline-block; padding: 0 10px; min-width: 102px; height: 38px; border: 1px solid #777; text-align: center; line-height: 38px; box-sizing: border-box; vertical-align: middle;}
+
+
+.h3{margin: 50px 0 20px 0; font-size: 18px; color: #222; font-weight: normal;}
+.h3:before{content: ""; display: inline-block; margin: 0 8px; width: 4px; height: 4px; background: skyblue; vertical-align: 5px;}
+
+   </style>    
+    <body>
+<header id="header">
+
+            <h1><img src="top_logo.png"></h1>
+            <div class="lnb clear">
+             <nav>
+             <ul>
+            <li><a href="#">분양안내</a>
+            <ul>
+              <li><a href="#">분양캘린더</a></li>
+              <li><a href="#">분양정보</a></li>
+            </ul>
+            </li>
+            <li><a href="#">현장안내</a>
+            <ul>
+              <li><a href="#">공사단지 정보</a></li>
+              <li><a href="#">입주단지 정보</a></li>
+            </ul>
+            </li>
+            <li><a href="#">입주안내</a>
+            <ul>
+              <li><a href="#">입주가이드</a></li>
+              <li><a href="#">중도금납부조회</a></li>
+              <li><a href="#">입주예약</a></li>
+            </ul>
+            </li>
+            <li><a href="#">고객서비스</a>
+            <ul>
+              <li><a href="#">A/S센터</a></li>
+              <li><a href="#">고객문의</a></li>
+            </ul></li>
+            <li><a href="#">브랜드</a><ul>
+              <li><a href="#">센트레빌</a></li>
+              <li><a href="#">센트레빌 아스테리움</a></li>
+              <li><a href="#">단지갤러리</a></li>
+              <li><a href="#">수상실적</a></li>
+              <li><a href="#">센트레빌 소식</a></li>
+            </ul>
+            </li>
+             </ul>
+             </nav>
+            <div></div>
+            </div>
+            
+            <ul>
+              <li><a href="#">LOGIN</a></li>
+              <li><a href="#">JOIN</a></li>
+            </ul>
+            <div class="visual"><img src="visualimg_3_1920.jpg"></div>
+        </header>
+<footer class="clear">
+        <div class="clear">
+            <a href="#header">TOP</a>
+            <div class="left">
+            <ul>
+                <li><a href="#">개인정보 처리방침</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">이메일무단수집거부</a></li>
+                <li><a href="#">사이트맵</a></li>
+            </ul>
+             <p>동부건설(주)<span></span>사업자번호:201-81-45685<span></span>대표자 : 허성희</p>
+            <address>서울시 용산구 한강대로 372 센트레빌 아스테리움 D동<span></span>02-3284-2114<span></span>copyright@2017 Dongbu Corporation,aLL RIGHTS RESRVED.</address>
+            </div>
+            <div class="right">
+            <select>
+            <option>FAMILY SITE</option>
+            <option>FAMILY SITE</option>
+            <option>FAMILY SITE</option>
+            <option>FAMILY SITE</option>
+            <option>FAMILY SITE</option>
+            <option>FAMILY SITE</option>
+            <option>FAMILY SITE</option>
+            </select>
+            </div>
+            </div>
+        </footer>
+
+        
+    </body>
+</html>

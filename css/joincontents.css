@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <meta http-equiv="X-UA-Compatible" content = "ie=edge">
+        <title> Keat </title>
+    </head>
+<style>
+header .index { padding: 0 30px 30px;}
+
+header {}
+header { padding: 0 30px 55px; background: linear-gradient(to right,#042e6f,#042e6f 50%,#f2f2f2 50%,#f2f2f2);}
+header .visual img{width: 100%;}
+header h1{position: absolute; z-index: 31; top: 0; left: 30px;}
+header>ul{display: flex; position: absolute; top: 0; right: 30px; z-index: 30; width: 170px;background:#f2f2f2;}
+header>ul li{flex: 1; line-height: 70px; padding: 0 0 0 18px;}
+header>ul li a:before{content: ""; display: inline-block; width: 23px; height: 23px; background: url(icon.png) no-repeat; vertical-align: middle;}
+header>ul li:first-child a:before{background-position: 0 0;}
+header>ul li:last-child a:before{background-position:-23px 0; }
+
+header .lnb{position: absolute; top: 0; left: 0; z-index: 30; padding: 0 232px; width: 100%;  box-sizing: border-box;}
+header .lnb nav{ position: relative; border-bottom: 1px solid rgba(255,255,255,0.5); text-align: center;  z-index: 30;}
+header .lnb nav+div{position: absolute; top: 0; left: 0; z-index:29; padding: 0 30px; background:#042e6f; width: 100%; height: 0; transition: all 0.5s; opacity: 0; box-sizing:border-box; background-clip: content-box;}
+header .lnb nav:hover+div{height: 400px; opacity: 1;}
+header .lnb nav>ul{display: inline-block; text-align: center; }
+
+header .lnb nav>ul:hover ul{display:block; }
+header .lnb nav>ul>li{display: inline-block; position: relative;}
+header .lnb nav>ul>li>a{display: block; position: relative; width: 160px; height: 69px; line-height: 69px; font-size: 18px; color: #fff;}
+header .lnb nav>ul>li>a:after{content: ""; position: absolute; bottom: -1px; left: 50%; width: 0; height: 2px; background: aliceblue; transition:all 0.5s;}
+header .lnb nav>ul>li:hover>a:after{content: ""; position: absolute; bottom: -1px; left: 0; width: 100%; height: 2px; background: aliceblue; }
+header .lnb nav>ul ul{display: none; position: absolute; width: 100%; height:230px; text-align: center; padding: 22px 0 0 0;}
+header .lnb nav>ul ul li{line-height: 61px;}
+header .lnb nav>ul ul a{position: relative; color: #fff; font-size: 14px; transition: all 0.5s;}
+header .lnb nav>ul ul a:hover{color: #2acef1;}
+header .lnb nav>ul ul a:after {content: ""; position: absolute; bottom: -7px; left: 50%; width:0; height: 2px; background: #2acef1; transition: all 0.3s}
+header .lnb nav>ul ul a:hover:after{content: ""; position: absolute; bottom: -7px; left: 0; width: 100%; height: 2px; background: #2acef1; }
+
+header .visual{position: relative;}
+header .visual img{display:inline-block; width: 100%; height: 330px;}
+header .visual:after{content: ""; position: absolute; bottom: 30%; left: 50%; transform: translate(-50%,-50%);background: url(sub4.png) no-repeat; width: 550px; height: 50px;}
+header .visual p{position: absolute; top: 75%; left: 50%; transform: translate(-50%,-50%); color: #fff; font-size: 14px;}
+.bread_crumbs{width: 800px; margin:-55px 0 0 210px; background: #fff;}
+.bread_crumbs>div:after{content: ""; display: block; clear: both;}
+.bread_crumbs>div{width: 1180px; border-bottom: 1px solid #aaa1a1; background: #fff;}
+.bread_crumbs>div>*{float: left;}
+.bread_crumbs>div>a{display: block; width: 73px; height: 54px; text-align: center; font-size: 0; line-height: 54px;}
+.bread_crumbs>div>a:before{content: ""; position: relative; top: 8px; display: inline-block; width: 17px; height: 18px; background: url(sub6.png) no-repeat -238px -5px;}
+.bread_crumbs>div>div{position: relative; border-left: 1px solid #dfdfdf; }
+.bread_crumbs>div>div:last-child{border-right:1px solid #dfdfdf }
+.bread_crumbs>div>div:hover ul{display: block;}
+.bread_crumbs>div>div>a{display: block; position: relative; width: 239px; height: 54px; text-indent: 30px; font-size: 15px; line-height: 54px; color: #333; }
+.bread_crumbs>div>div>a:after{content: ""; position: absolute; top: 62%; right: 10%; transform: translate(-50%,-50%); background: url(icon.png) no-repeat -221px -5px; display: inline-block; width: 17px; height: 18px; }
+.bread_crumbs>div ul{display: none; position: absolute; left: -1px; z-index: 10; width: 241px; box-sizing: border-box;  border: 1px solid #dfdfdf; padding: 10px 0; background: #fff;}
+
+.bread_crumbs>div ul a{display: block; height: 35px; text-indent: 26px; line-height: 35px; font-size: 15px; color: #333; }
+.bread_crumbs>div ul a:hover{color: #042e9d;}
+
+.contents .step{display: flex; padding: 15px 0 15px 0; margin:0 0 50px 0;  text-align: center; border-top: 1px solid #aaa; border-bottom: 1px solid #aaa;}
+.contents .step li{position: relative; flex: 1; display: inline-block; font-size: 17px;}
+.contents .step li~li:after{content: ""; position: absolute; top: 50%; left: 0; transform: translateY(-50%); width: 12px; height: 19px; background: url(icon.png) no-repeat -304px -58px;}
+.contents .step li .on{color: #131ab7;}
+
+
+
+/*테이블*/
+
+.table1{border-top:2px solid #222; border-bottom: 1px solid #777;}
+.table1 th,
+.table1 td{height: 40px; border-top: 1px solid #ccc; border-left: 1px solid #ccc; font-size: 13px }
+.table1 th:first-child{border-left: none;}
+.table1 tr:first-child th,
+.table1 tr:first-child td{border-top: none;}
+.table1 th{padding: 10px 10px 10px 45px; text-align: left; font-weight: normal;color: #222;}
+.table1 th span{overflow: hidden; display: inline-block; margin: 0 6px 0 -14px; width: 8px; height: 7px; background: url(icon.png) no-repeat -534px -5px; color: transparent; vertical-align: 1px;}
+.table1 td{padding: 10px 55px; color: #777;}
+.table1 td input[type="text"],
+.table1 td input[type="tel"],
+.table1 td input[type="number"],
+.table1 td input[type="password"]
+{padding: 0 33px; border: 1px solid #ccc; height: 38px; line-height: 38px; box-sizing: border-box;}
+.table1 select{padding: 0 59px 0 20px;; height: 38px; line-height: 38px; border: 1px solid #ccc; color: #777; box-sizing: border-box; background: url(ico_select.png) no-repeat right; -webkit-appearance:none; }
+select::-ms-expand{display: none;}
+.table1 .info{}
+.table1 .info:before{content: ""; margin: 0 5px 0 13px; display: inline-block; width: 15px; height: 14px; background: url(icon.png) no-repeat -336px -5px; vertical-align: middle;}
+.table1 td>div{padding: 10px 0 0;}
+.table1 td>div:first-child{padding:0;}
+.table1 td .btn_type3{margin: 0 0 0 5px;}
+
+.table2{border-top: 1px solid #333; border-bottom: 1px solid #777;}
+.table2 th,
+.table2 td{padding: 12px 0; border-top: 1px solid #333; box-sizing: border-box;}
+.table2 tr:first-child th,
+.table2 tr:first-child td{border-top: 1px solid #333;}
+.table2 th{border: 1px solid #333; font-weight: normal; font-size: 13px; color: #222; box-sizing: border-box;}
+.table2 th:first-child{border-left: none;}
+.table2 td{padding: 12px 0 12px 60px}
+.table2 input{padding: 0 30px; height: 38px; line-height: 38px; margin: 0 5px 0 0; box-sizing: border-box;}
+.table2 select{display: inline-block; width: 210px; height: 38px; padding: 0 20px; line-height: 38px; box-sizing: border-box;}
+.table2 input[type="text"],
+.table2 input[type="number"]{margin-right: 10px;}
+.table2 .btn_type3{margin: 0 10px 0 0;}
+</style>
+    <body>
+        
+    </body>
+</html>
